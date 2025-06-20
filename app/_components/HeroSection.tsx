@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import ProcessSteps from './ProcessSteps';
-import Button from '@/app/_components/Buttons/HomepageButton';
+import GenerationRedirectButton from '@/app/_components/Buttons/GenerationRedirectButton';
 
 export default function HeroSection() {
   const [currentWord, setCurrentWord] = useState(0);
@@ -65,7 +65,7 @@ export default function HeroSection() {
 
         {/* CTA Button */}
         <div className="mb-12 flex justify-center">
-          <Button href="/generate-story">Start Creating</Button>
+          <GenerationRedirectButton href="/generate-story">Start Creating</GenerationRedirectButton>
         </div>
 
         {/* Process Steps */}

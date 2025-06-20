@@ -41,7 +41,7 @@ export default function ProcessSteps() {
                 <step.icon 
                   sx={{ 
                     fontSize: 22, 
-                    color: 'var(--jonquil-500)',
+                    color: 'var(--royal-blue-traditional-200)',
                     '.dark &': {
                       color: '#ffffff'
                     }
