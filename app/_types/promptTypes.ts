@@ -15,6 +15,8 @@ export interface OneShotStoryPrompts {
   chunkTarget: number;
   instruction: GenerationInstruction;
   focusMode?: FocusMode;
+  creativityLevel: CreativityLevel;
+  consistencyMode: boolean;
 }
 
 export interface InteractiveStoryPrompts {
@@ -28,4 +30,9 @@ export interface InteractiveStoryPrompts {
   creativityLevel?: CreativityLevel;
   consistencyMode?: boolean;
   focusMode?: FocusMode;
+}
+
+export interface TitleGenerationPrompts {
+  storyText: string;
+  genre?: string; 
 }

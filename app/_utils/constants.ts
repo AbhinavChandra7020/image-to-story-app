@@ -1,4 +1,4 @@
-// Base URL for your local Ollama server
+import { FocusMode } from "@/app/_types/promptTypes";
 export const OLLAMA_API_URL = "http://localhost:11434/api";
 
 export const MODELS = {
@@ -25,4 +25,13 @@ export const POLISH_PRESETS = {
     conservative: { temperature: 0.3, top_p: 0.7, repeat_penalty: 1.1 },
     balanced:     { temperature: 0.6, top_p: 0.8, repeat_penalty: 1.1 },
     creative:     { temperature: 0.9, top_p: 0.95, repeat_penalty: 1.05 },
+};
+
+
+
+export const focusTextMap: Record<FocusMode, string> = {
+  descriptive: "Focus on vivid descriptions and sensory details.",
+  dialogue: "Emphasize character interactions and dialogue.",
+  action: "Focus on dynamic scenes and plot progression.",
+  balanced: "Balance description, dialogue, and action.",
 };

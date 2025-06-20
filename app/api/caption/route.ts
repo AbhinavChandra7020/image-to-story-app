@@ -1,3 +1,5 @@
+//api/caption
+
 import { NextRequest, NextResponse } from "next/server";
 import { generateCaptionFromBase64 } from "@/app/_lib/generateCaption";
 export async function GET(){

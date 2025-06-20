@@ -3,8 +3,10 @@
 import {
   OneShotStoryPrompts,
   InteractiveStoryPrompts,
-  FocusMode
+  TitleGenerationPrompts,
 } from "@/app/_types/promptTypes";
+
+import { focusTextMap } from "@/app/_utils/constants";
 
 // === Prompt for Image Caption Generation ===
 export function imgCaptionPrompt(detail: "short" | "detailed"): string {
@@ -16,20 +18,12 @@ export function imgCaptionPrompt(detail: "short" | "detailed"): string {
 }
 
 // === Prompt for Title Generation ===
-export function titleGenerationPrompt(storyText: string, genre: string = "General"): string {
+export function titleGenerationPrompt({ storyText, genre }: TitleGenerationPrompts): string {
   return `You are a professional book title creator. Given the following ${genre} story, generate 5 creative, compelling, and short title options (max 10 words each). Avoid generic titles. Make them intriguing and genre-appropriate. Number each option clearly.
 
 Story: ${storyText}
 Title options:`;
 }
-
-// === Focus Mode Prompt Modifiers ===
-const focusTextMap: Record<FocusMode, string> = {
-  descriptive: "Focus on vivid descriptions and sensory details.",
-  dialogue: "Emphasize character interactions and dialogue.",
-  action: "Focus on dynamic scenes and plot progression.",
-  balanced: "Balance description, dialogue, and action.",
-};
 
 // === One-Shot Story Prompt ===
 export function oneShotStoryPrompt({
@@ -39,6 +33,8 @@ export function oneShotStoryPrompt({
   chunkTarget = 500,
   instruction,
   focusMode = "balanced",
+  creativityLevel,
+  consistencyMode,
 }: OneShotStoryPrompts): string {
   const focusText = focusTextMap[focusMode];
 
@@ -124,9 +120,12 @@ Continue the story:`;
   }
 }
 
-export function polishPrompt(chunk:string): string {
+// === Polish Prompt ===
+export function polishPrompt(chunk: string): string {
+  return `You are a professional novel editor. Fix the grammar, enhance readability, and format the text into natural paragraphs. Preserve the original meaning and tone. Output ONLY the corrected story text WITHOUT any explanation, introduction, or notes. Just the pure and polished story.
 
-  return `You are a professional novel editor. Fix the grammar, enhance readability, and format the text into natural paragraphs. Preserve the roiginal meaning and tone. Output ONLY the corrected story text WITHOUT any explanation, introduction, or notes. Just the pure and polished story.
-  Text${chunk}
-  Polished Story Text:`
+Text:
+${chunk}
+
+Polished Story Text:`;
 }
