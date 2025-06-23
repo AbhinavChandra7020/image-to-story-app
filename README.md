@@ -26,6 +26,11 @@ A picture is worth a thousand words. Let me prove that. ImageineIt is a sophisti
 - **Model Hosting**: Ollama for local AI model deployment.
 - **Streaming**: Real-time response streaming for enhanced UX.
 
+### Support Libraries
+- **DOCX**: Saving files as a docx file.
+- **file-saver**: Easier file saving functions.
+- **jsPDF**: Savile files as PDFs.
+
 ---
 ## Installation & Setup
 
