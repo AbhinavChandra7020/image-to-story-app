@@ -1,8 +1,9 @@
-// app/_components/AboutComponents/AboutTechnologyGrid.tsx
+
 "use client";
 
 import { useState } from 'react';
 import { SvgIconComponent } from '@mui/icons-material';
+import { AutoFixHigh, Psychology, Code, Bolt } from '@mui/icons-material';
 
 export interface TechnologyFeature {
   icon: SvgIconComponent;
@@ -11,11 +12,34 @@ export interface TechnologyFeature {
   technical: string;
 }
 
-interface AboutTechnologyGridProps {
-  features: TechnologyFeature[];
-}
+export default function AboutTechnologyGrid() {
+  const features: TechnologyFeature[] = [
+    {
+      icon: AutoFixHigh,
+      title: "AI-Powered Vision",
+      description: "Advanced computer vision technology analyzes your images with unprecedented accuracy, understanding context, composition, and emotional undertones.",
+      technical: "Built with Qwen2.5VL:7B for image analysis and Llama3.1:8B for story generation"
+    },
+    {
+      icon: Psychology,
+      title: "Intelligent Storytelling",
+      description: "Our AI doesn't just describe what it sees - it crafts compelling narratives that capture the essence and emotion of your images.",
+      technical: "Multiple creativity levels and focus modes for personalized story generation"
+    },
+    {
+      icon: Code,
+      title: "Modern Architecture",
+      description: "Built with cutting-edge web technologies for a seamless, responsive experience across all devices and platforms.",
+      technical: "Next.js 15, TypeScript, Tailwind CSS, Material-UI, and Ollama integration"
+    },
+    {
+      icon: Bolt,
+      title: "Real-Time Processing",
+      description: "Experience lightning-fast story generation with streaming responses and optimized model configurations.",
+      technical: "Streaming API responses with configurable temperature and creativity parameters"
+    }
+  ];
 
-export default function AboutTechnologyGrid({ features }: AboutTechnologyGridProps) {
   const [activeFeature, setActiveFeature] = useState(0);
   const ActiveIcon = features[activeFeature].icon;
 
@@ -32,7 +56,6 @@ export default function AboutTechnologyGrid({ features }: AboutTechnologyGridPro
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Feature Cards */}
           <div className="space-y-4">
             {features.map((feature, index) => (
               <div
@@ -44,7 +67,7 @@ export default function AboutTechnologyGrid({ features }: AboutTechnologyGridPro
               >
                 <div className={`p-6 rounded-2xl border transition-all duration-300 ${
                   activeFeature === index
-                    ? 'bg-gradient-to-br from-mustard-100 to-jonquil-100 border-mustard-300 shadow-lg dark:from-mustard-900/20 dark:to-jonquil-900/20 dark:border-mustard-600/30'
+                    ? 'bg-gradient-to-br from-mustard-100 to-jonquil-100 border-royal_blue_traditional-600 shadow-lg shadow-royal_blue_traditional-600/30 dark:from-mustard-900/20 dark:to-jonquil-900/20 dark:border-mustard-600/30 dark:shadow-lg dark:shadow-mustard-600/30'
                     : 'bg-anti_flash_white-100/80 border-anti_flash_white-300 hover:border-mustard-200 dark:bg-royal_blue_traditional-800/30 dark:border-royal_blue_traditional-700 dark:hover:border-mustard-600/30'
                 }`}>
                   <div className="flex items-start space-x-4">
@@ -79,7 +102,6 @@ export default function AboutTechnologyGrid({ features }: AboutTechnologyGridPro
             ))}
           </div>
 
-          {/* Details Panel */}
           <div className="lg:sticky lg:top-24">
             <div className="bg-anti_flash_white-100/80 dark:bg-royal_blue_traditional-800/50 rounded-2xl p-8 border border-anti_flash_white-300 dark:border-royal_blue_traditional-700 shadow-lg backdrop-blur-sm">
               <div className="flex items-center mb-6">

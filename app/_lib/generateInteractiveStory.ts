@@ -31,7 +31,7 @@ export async function generateInteractiveStory({
 
   let { temperature, top_p, top_k, repeat_penalty } = preset;
 
-  // Adjust for consistency mode
+  // consistency mode settings
   if (consistencyMode && !ending) {
     temperature *= 0.8;
     top_p *= 0.9;

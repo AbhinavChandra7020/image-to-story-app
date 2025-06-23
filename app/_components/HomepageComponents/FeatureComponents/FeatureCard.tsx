@@ -1,4 +1,3 @@
-// app/_components/FeaturesComponents/FeatureCard.tsx
 "use client";
 
 import { SvgIconComponent } from '@mui/icons-material';
@@ -28,7 +27,6 @@ export default function FeatureCard({ feature, isActive, onClick }: FeatureCardP
             <IconComponent 
               sx={{ 
                 fontSize: 24,
-                // Jonquil-500 in light mode when active, blue in dark mode when active
                 color: isActive ? '#ffcb05' : 'inherit'
               }}
               className={`transition-colors duration-300 ${

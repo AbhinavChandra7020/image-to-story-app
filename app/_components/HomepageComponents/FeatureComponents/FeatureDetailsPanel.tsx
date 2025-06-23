@@ -1,4 +1,3 @@
-// app/_components/FeaturesComponents/FeatureDetailsPanel.tsx
 "use client";
 
 import type { FeatureDetailsPanelProps } from './FeaturesGrid';
@@ -42,7 +41,6 @@ export default function FeatureDetailsPanel({
         </div>
       </div>
 
-      {/* Feature Navigation Dots */}
       <div className="flex justify-center mt-8 space-x-2">
         {Array.from({ length: totalFeatures }).map((_, index) => (
           <button

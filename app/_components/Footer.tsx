@@ -8,13 +8,13 @@ export function Footer() {
   const socialLinks = [
     { 
       name: 'GitHub', 
-      href: 'https://github.com/yourusername', // Replace with your GitHub URL
+      href: 'https://github.com/AbhinavChandra7020', 
       icon: Github,
       hoverColor: 'hover:text-gray-900 dark:hover:text-white'
     },
     { 
       name: 'LinkedIn', 
-      href: 'https://linkedin.com/in/yourusername', // Replace with your LinkedIn URL
+      href: 'https://www.linkedin.com/in/abhinav-chandra-475660249/', 
       icon: Linkedin,
       hoverColor: 'hover:text-blue-400'
     }
@@ -22,10 +22,8 @@ export function Footer() {
 
   return (
     <footer className="bg-royal_blue_traditional-900 dark:bg-royal_blue_traditional-950 text-anti_flash_white-300">
-      {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center">
-          {/* Brand Section */}
           <div className="mb-8">
             <div className="flex items-center justify-center space-x-3 mb-4">
               <img 
@@ -42,7 +40,6 @@ export function Footer() {
               Every picture has a tale to tell, and we help you discover it.
             </p>
             
-            {/* Social Links */}
             <div className="flex justify-center space-x-4">
               {socialLinks.map((social) => (
                 <a
@@ -61,12 +58,11 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-royal_blue_traditional-800 bg-royal_blue_traditional-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="text-center">
             <div className="text-anti_flash_white-500 text-sm">
-              Powered by Ollama • Built for Creativity
+              Powered by Ollama • Built for Creativity • Abhinav Chandra
             </div>
           </div>
         </div>

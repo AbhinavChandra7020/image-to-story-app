@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import ProcessSteps from './ProcessSteps';
+import ProcessSteps from '@/app/_components/HomepageComponents/ProcessSteps';
 import GenerationRedirectButton from '@/app/_components/Buttons/GenerationRedirectButton';
 
 export default function HeroSection() {
@@ -18,7 +18,6 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-anti_flash_white-100 via-anti_flash_white-200 to-mustard-100/30 dark:from-royal_blue_traditional-900 dark:via-royal_blue_traditional-800 dark:to-polynesian_blue-900/30">
-      {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-mustard-300/20 rounded-full mix-blend-multiply filter blur-xl animate-blob dark:bg-mustard-600/10" />
         <div className="absolute top-40 right-10 w-72 h-72 bg-jonquil-300/20 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000 dark:bg-jonquil-600/10" />
@@ -26,7 +25,6 @@ export default function HeroSection() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8 -mt-8">
-        {/* Main heading */}
         <div className="mb-6">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-4">
             <span className="block text-royal_blue_traditional-800 dark:text-yellow-accent">
@@ -53,22 +51,20 @@ export default function HeroSection() {
               </span>
             </span>
             <span className="block text-lg sm:text-xl lg:text-2xl font-medium text-royal_blue_traditional-600 dark:text-yellow-accent mt-2">
-              Every picture has a tale to tell
+              Every picture has a tale to tell.
             </span>
           </h1>
           
           <p className="text-lg sm:text-xl text-royal_blue_traditional-600 dark:text-yellow-accent max-w-3xl mx-auto leading-relaxed">
-            Upload any image and watch as our AI transforms it into captivating stories. 
+            Upload any image and watch as the AI transforms it into captivating stories. 
             From fantasy adventures to sci-fi thrillers, every picture has a tale to tell.
           </p>
         </div>
 
-        {/* CTA Button */}
         <div className="mb-12 flex justify-center">
           <GenerationRedirectButton href="/generate-story">Start Creating</GenerationRedirectButton>
         </div>
 
-        {/* Process Steps */}
         <ProcessSteps />
       </div>
     </section>

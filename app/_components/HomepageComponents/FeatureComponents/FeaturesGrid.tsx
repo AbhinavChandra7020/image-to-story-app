@@ -1,4 +1,3 @@
-// app/_components/FeaturesComponents/FeaturesGrid.tsx
 "use client";
 
 import { useState } from 'react';
@@ -14,7 +13,6 @@ import {
 import FeatureCard from './FeatureCard';
 import FeatureDetailsPanel from './FeatureDetailsPanel';
 
-// Types
 interface Feature {
   icon: SvgIconComponent;
   title: string;
@@ -35,12 +33,11 @@ interface FeatureDetailsPanelProps {
   onNavigate: (index: number) => void;
 }
 
-// Data
 const featuresData: Feature[] = [
   {
     icon: CameraAlt,
     title: 'Smart Image Analysis',
-    description: 'Our AI deeply analyzes your images, understanding context, mood, characters, and settings to create rich, detailed story foundations.',
+    description: 'The AI model deeply analyzes your images, understanding context, mood, characters, and settings to create rich, detailed story foundations.',
     details: [
       'Object and character recognition',
       'Scene composition analysis',
@@ -105,7 +102,6 @@ const featuresData: Feature[] = [
   }
 ];
 
-// Export types for other components
 export type { Feature, FeatureCardProps, FeatureDetailsPanelProps };
 
 export default function FeaturesGrid() {
@@ -113,7 +109,6 @@ export default function FeaturesGrid() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-      {/* Feature Cards */}
       <div className="space-y-6">
         {featuresData.map((feature, index) => (
           <FeatureCard
@@ -125,7 +120,6 @@ export default function FeaturesGrid() {
         ))}
       </div>
 
-      {/* Feature Details Panel */}
       <FeatureDetailsPanel
         feature={featuresData[activeFeature]}
         activeIndex={activeFeature}

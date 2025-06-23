@@ -1,4 +1,4 @@
-// app/_components/Buttons/FooterButton.tsx
+
 "use client";
 
 import { LucideIcon } from 'lucide-react';

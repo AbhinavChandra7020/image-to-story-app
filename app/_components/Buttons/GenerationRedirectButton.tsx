@@ -1,4 +1,4 @@
-// app/_components/Buttons/GenerationRedirectButton.tsx
+
 "use client";
 
 import { ArrowForward } from '@mui/icons-material';

@@ -1,16 +1,15 @@
-//api/title
+// app/api/title/route.ts - Fixed endpoint path
 
 import { NextRequest, NextResponse } from "next/server";
 import { generateTitle } from "@/app/_lib/generateTitle";
 import { TitleGenerationPrompts } from "@/app/_types/promptTypes";
-export async function GET(){
 
+export async function GET(){
     return NextResponse.json({
-        captionTxt: "This is the title generation endpoint"
+        message: "This is the title generation endpoint"
     })
 }
 
-// app/api/generate-title/route.ts
 export async function POST(req: NextRequest) {
   try {
     const body = (await req.json()) as TitleGenerationPrompts;

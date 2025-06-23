@@ -28,7 +28,6 @@ export default function ProcessSteps() {
 
   return (
     <div className="max-w-5xl mx-auto">
-      {/* Process Steps Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {steps.map((step, index) => (
           <div
@@ -56,7 +55,6 @@ export default function ProcessSteps() {
               </p>
             </div>
             
-            {/* Connector line for desktop */}
             {index < steps.length - 1 && (
               <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-mustard-400 to-transparent" />
             )}

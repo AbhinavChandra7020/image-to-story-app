@@ -2,9 +2,9 @@ import { SaveFileType } from "@/app/_types/fileTypes";
 import { Document, Packer, Paragraph, TextRun } from "docx";
 import { saveAs } from "file-saver";
 import { jsPDF } from "jspdf";
-import { normalizeParagraphs } from "@/app/_utils/paragraphFormatter"; // ✅ Added utility
+import { normalizeParagraphs } from "@/app/_utils/paragraphFormatter"; 
 
-// ✅ Save as .txt
+// save files as txt
 export function saveAsTxt({ title, storyText }: SaveFileType) {
   const plainText = `${title}\n\n${storyText}`;
   const blob = new Blob([plainText], { type: "text/plain" });
@@ -19,7 +19,7 @@ export function saveAsTxt({ title, storyText }: SaveFileType) {
   URL.revokeObjectURL(url);
 }
 
-// ✅ Save as .docx
+// save files as docx
 export async function saveAsDocx({ title, storyText }: SaveFileType) {
   const formatted = normalizeParagraphs(storyText);
 
@@ -46,7 +46,7 @@ export async function saveAsDocx({ title, storyText }: SaveFileType) {
   saveAs(blob, `${title.replace(/\s+/g, "_")}.docx`);
 }
 
-// ✅ Save as .pdf
+// save files as pdf
 export function saveAsPdf({ title, storyText }: SaveFileType) {
   const formatted = normalizeParagraphs(storyText);
 

@@ -1,14 +1,13 @@
-// app/_components/AboutComponents/AboutHeroSection.tsx
 "use client";
 
-interface AboutHeroSectionProps {
-  stats: Array<{
-    value: string;
-    label: string;
-  }>;
-}
+export default function AboutHeroSection() {
+  const stats = [
+    { value: "7B+", label: "Parameters in Vision Model" },
+    { value: "8B+", label: "Parameters in Language Model" },
+    { value: "4", label: "Story Generation Modes" },
+    { value: "∞", label: "Creative Possibilities" }
+  ];
 
-export default function AboutHeroSection({ stats }: AboutHeroSectionProps) {
   return (
     <section className="pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -25,7 +24,6 @@ export default function AboutHeroSection({ stats }: AboutHeroSectionProps) {
           we bridge the gap between seeing and storytelling, turning every image into a gateway for creative expression.
         </p>
 
-        {/* Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto mb-12">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">

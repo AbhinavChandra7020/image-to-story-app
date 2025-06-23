@@ -9,7 +9,7 @@ export function Header() {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Create Story', href: '/create' },
+    { name: 'Create Story', href: '/generate-story' },
     { name: 'About', href: '/about' },
   ];
 
@@ -17,7 +17,6 @@ export function Header() {
     <header className="fixed top-0 w-full z-50 bg-anti_flash_white-100/80 backdrop-blur-md border-b border-anti_flash_white-300/30 dark:bg-royal_blue_traditional-900/80 dark:border-royal_blue_traditional-700/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex items-center">
             <div className="flex items-center space-x-3 group">
               <img 
@@ -31,7 +30,6 @@ export function Header() {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <a
@@ -45,13 +43,11 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Theme Toggle & Mobile Menu Button */}
           <div className="flex items-center space-x-4">
             <div className="flex items-center justify-center">
               <ThemeToggle />
             </div>
             
-            {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 rounded-lg bg-anti_flash_white-400/20 text-royal_blue_traditional-600 hover:bg-anti_flash_white-300/30 transition-colors duration-200 dark:bg-royal_blue_traditional-800/30 dark:text-anti_flash_white-300 dark:hover:bg-royal_blue_traditional-700/40"
@@ -61,7 +57,6 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         <div className={`md:hidden transition-all duration-300 ease-in-out ${
           isMenuOpen 
             ? 'max-h-64 opacity-100' 

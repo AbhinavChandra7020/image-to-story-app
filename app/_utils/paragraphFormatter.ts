@@ -1,4 +1,3 @@
-// app/_utils/paragraphFormatter.ts
 
 export function normalizeParagraphs(text: string): string {
   return text

@@ -1,7 +1,8 @@
+
 "use client";
 
-import HeroSection from '@/app/_components/HeroSection';
-import  Features  from '@/app/_components/Features';
+import HeroSection from '@/app/_components/HomepageComponents/HeroSection';
+import  Features  from '@/app/_components/HomepageComponents/Features';
 
 export function Homepage() {
   return (

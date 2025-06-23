@@ -1,4 +1,3 @@
-// app/_lib/streamParser.ts
 
 export async function parseStreamedResponse(stream: ReadableStream<Uint8Array>): Promise<string> {
   const reader = stream.getReader();
@@ -12,10 +11,18 @@ export async function parseStreamedResponse(stream: ReadableStream<Uint8Array>):
     try {
       const chunk = decoder.decode(value, { stream: true });
       const parsed = JSON.parse(chunk.trim());
+      
+      // error check
+      if (parsed.error) {
+        throw new Error(parsed.error);
+      }
+      
       result += parsed.response ?? "";
-    } catch {
-      // ignore malformed chunks (e.g., incomplete JSON between stream splits)
-      continue;
+    } catch (error) {
+      if (error instanceof SyntaxError) {
+        continue;
+      }
+      throw error;
     }
   }
 

@@ -1,4 +1,4 @@
-// app/_components/AboutComponents/AboutProjectAndCTA.tsx
+
 "use client";
 
 import GenerationRedirectButton from '@/app/_components/Buttons/GenerationRedirectButton';
@@ -6,7 +6,6 @@ import GenerationRedirectButton from '@/app/_components/Buttons/GenerationRedire
 export default function AboutProjectAndCTA() {
   return (
     <>
-      {/* Project Showcase Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -16,8 +15,8 @@ export default function AboutProjectAndCTA() {
             <div className="space-y-6 text-lg text-royal_blue_traditional-600 dark:text-yellow-accent leading-relaxed">
               <p>
                 ImageineIt is a full-stack AI application that demonstrates the integration of modern web technologies 
-                with cutting-edge machine learning models. Built as a portfolio project, it showcases skills in 
-                React, Next.js, TypeScript, and AI model integration.
+                with cutting-edge machine learning models. It uses
+                React, Next.js, TypeScript, and AI model integration via Ollama namely the Qwen 2.5-vl and Llama 3.1.
               </p>
               <p>
                 The application combines computer vision capabilities with natural language processing to create 
@@ -25,15 +24,13 @@ export default function AboutProjectAndCTA() {
                 and a responsive design that works seamlessly across devices.
               </p>
               <p>
-                This project represents my exploration into the possibilities of AI-powered applications and 
-                demonstrates practical implementation of complex technologies in an accessible, user-friendly interface.
+                This project demonstrates practical implementation of complex technologies in an accessible, user-friendly interface.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-anti_flash_white-50/50 dark:bg-royal_blue_traditional-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-royal_blue_traditional-800 dark:text-yellow-accent mb-6">
