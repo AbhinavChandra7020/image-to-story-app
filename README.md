@@ -45,7 +45,7 @@ A picture is worth a thousand words. Let me prove that. ImageineIt is a sophisti
 1. **Clone the repository**
    ```bash
    git clone https://github.com/AbhinavChandra7020/image-to-story-app
-   cd image-to-story-app
+   cd imagineit
    ```
 
 2. **Install dependencies**
